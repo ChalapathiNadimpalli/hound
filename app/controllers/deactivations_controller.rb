@@ -28,6 +28,9 @@ class DeactivationsController < ApplicationController
   end
 
   def check_for_subscription
+    unless current_user.role == 'admin'
+      raise CannotActivatePaidRepo
+    end
     if repo.subscription
       raise CannotDeactivateRepoWithSubscription
     end

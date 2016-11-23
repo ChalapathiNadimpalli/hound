@@ -23,7 +23,7 @@ class Repo extends React.Component {
           {"repo-activation-toggle--private": showPrivate}
         )}>
           <span className="repo-private-label">
-            Private - ${repo.price_in_dollars}
+            Private
           </span>
           <RepoActivationButton
             repo={repo}

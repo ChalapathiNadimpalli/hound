@@ -16,6 +16,9 @@ class ActivationsController < ApplicationController
   private
 
   def check_repo_plan
+    unless current_user.role == 'admin'
+      raise CannotActivatePaidRepo
+    end
     if repo.plan_price > 0
       raise CannotActivatePaidRepo
     end
