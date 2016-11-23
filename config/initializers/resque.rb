@@ -5,6 +5,8 @@ require "resque/failure/multiple"
 require "resque/server"
 require "resque/scheduler/server"
 
+Resque.inline = true
+
 Resque.after_fork do
   defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
 end
