@@ -36,6 +36,7 @@ gem "sass-rails"
 gem "split", require: "split/dashboard"
 gem "stripe"
 gem "uglifier", ">= 2.7.2"
+gem "dotenv-rails"
 
 group :staging, :production do
   gem "rack-timeout"
@@ -46,7 +47,6 @@ end
 group :development, :test do
   gem "bundler-audit", require: false
   gem "byebug"
-  gem "dotenv-rails"
   gem "foreman"
   gem "quiet_assets"
   gem "rspec-rails", ">= 3.4"
