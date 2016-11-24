@@ -1,8 +1,5 @@
 namespace :dev do
-
-  task :test, [:test, 'role'] => :environment do |t, args|
-    puts 'ok'
-  end
+  
   desc 'Add role to a user'
   # rake dev:set_user_role["ChalapathiNadimpalli", "admin"]
   task :set_user_role, [:username, 'role'] => :environment do |t, args|
